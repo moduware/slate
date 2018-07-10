@@ -1,23 +1,23 @@
 ---
-title: nexpaq.module.usbflash Driver
+title: nexpaq.module.speaker Driver
 
 language_tabs:
   - javascript
 
 toc_footers:
-  - <a href='#'>Drivers list</a>
+  - <a href='https://moduware.github.io/developer-documentation/module-drivers/'>Drivers list</a>
 
 search: true
 ---
 
-# Driver: nexpaq.module.usbflash
+# Driver: nexpaq.module.speaker
 
-**Type**: nexpaq.module.usbflash
+**Type**: nexpaq.module.speaker
 
-**Version**: 1.0.2
+**Version**: 1.0.0
 # Commands 
 
-## Checks the status of USB flash module
+## Checks the status of Speaker module
 
 ```javascript
 Moduware.v0.API.Module.SendCommand(Moduware.Arguments.uuid, 'StatusCheck', []);
@@ -27,9 +27,9 @@ Command Name | Message Type
 -------------- | --------------
 StatusCheck | 2702
 
-To work with USB flash module and read data, USB flash module must be plugged in.
+To work with Speaker module, Speaker module must be plugged in.
 
-## Connects to the USB flash
+## Connects to the Speaker module.
 
 ```javascript
 Moduware.v0.API.Module.SendCommand(Moduware.Arguments.uuid, 'Connect', []);
@@ -39,9 +39,9 @@ Command Name | Message Type
 -------------- | --------------
 Connect | 2700
 
-Connects to the USB flash that is plugged in.
+Connects to the Speaker that is plugged in.
 
-## Disconnects from the USB flash
+## Disconnects from the Speaker module.
 
 ```javascript
 Moduware.v0.API.Module.SendCommand(Moduware.Arguments.uuid, 'Disconnect', []);
@@ -51,7 +51,7 @@ Command Name | Message Type
 -------------- | --------------
 Disconnect | 2700
 
-Disconnects from USB flash that is plugged in.
+Disconnects from Speaker that is plugged in.
 # Data 
 
 <aside class="warning">If you want to work with received data you need to listen for <code>DataReceived</code> event after Api is ready</aside>
@@ -70,7 +70,7 @@ document.addEventListener('WebViewApiReady', function() {
 ```
   
 
-## State Change Reponse
+## State Change Response
 
 ```javascript
 if(event.dataSource == 'StateChangeResponse') {
@@ -100,7 +100,7 @@ Name | Title | Description | States
 -------------- | -------------- | -------------- | --------------
 result | Result | Result of connect or disconnect request | success / failure
 
-## Status Request Reponse
+## Status Request Response
 
 ```javascript
 if(event.dataSource == 'StatusRequestResponse') {

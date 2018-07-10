@@ -5,7 +5,7 @@ language_tabs:
   - javascript
 
 toc_footers:
-  - <a href='#'>Drivers list</a>
+  - <a href='https://moduware.github.io/developer-documentation/module-drivers/'>Drivers list</a>
 
 search: true
 ---
@@ -52,11 +52,10 @@ Command Name | Message Type
 ChangeEmissivity | 2702
 
 Change emissivity of sensor
-### Arguments 
-
+### Arguments
 Name | Description | Validation
 -------------- | -------------- | --------------
-Emissivity | - | none  
+Emissivity | - | none
 # Data 
 
 <aside class="warning">If you want to work with received data you need to listen for <code>DataReceived</code> event after Api is ready</aside>

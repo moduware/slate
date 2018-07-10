@@ -5,7 +5,7 @@ language_tabs:
   - javascript
 
 toc_footers:
-  - <a href='#'>Drivers list</a>
+  - <a href='https://moduware.github.io/developer-documentation/module-drivers/'>Drivers list</a>
 
 search: true
 ---
