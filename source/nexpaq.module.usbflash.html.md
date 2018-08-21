@@ -1,5 +1,5 @@
 ---
-title: nexpaq.module.speaker Driver
+title: nexpaq.module.usbflash Driver
 
 language_tabs:
   - javascript
@@ -10,14 +10,14 @@ toc_footers:
 search: true
 ---
 
-# Driver: nexpaq.module.speaker
+# Driver: nexpaq.module.usbflash
 
-**Type**: nexpaq.module.speaker
+**Type**: nexpaq.module.usbflash
 
-**Version**: 1.0.0
+**Version**: 1.0.2
 # Commands 
 
-## Checks the status of Speaker module
+## Checks the status of USB flash module
 
 ```javascript
 Moduware.v0.API.Module.SendCommand(Moduware.Arguments.uuid, 'StatusCheck', []);
@@ -27,9 +27,9 @@ Command Name | Message Type
 -------------- | --------------
 StatusCheck | 2702
 
-To work with Speaker module, Speaker module must be plugged in.
+To work with USB flash module and read data, USB flash module must be plugged in.
 
-## Connects to the Speaker module.
+## Connects to the USB flash
 
 ```javascript
 Moduware.v0.API.Module.SendCommand(Moduware.Arguments.uuid, 'Connect', []);
@@ -39,9 +39,9 @@ Command Name | Message Type
 -------------- | --------------
 Connect | 2700
 
-Connects to the Speaker that is plugged in.
+Connects to the USB flash that is plugged in.
 
-## Disconnects from the Speaker module.
+## Disconnects from the USB flash
 
 ```javascript
 Moduware.v0.API.Module.SendCommand(Moduware.Arguments.uuid, 'Disconnect', []);
@@ -51,7 +51,7 @@ Command Name | Message Type
 -------------- | --------------
 Disconnect | 2700
 
-Disconnects from Speaker that is plugged in.
+Disconnects from USB flash that is plugged in.
 # Data 
 
 <aside class="warning">If you want to work with received data you need to listen for <code>DataReceived</code> event after Api is ready</aside>
@@ -70,7 +70,7 @@ document.addEventListener('WebViewApiReady', function() {
 ```
   
 
-## State Change Response
+## State Change Reponse
 
 ```javascript
 if(event.dataSource == 'StateChangeResponse') {
@@ -100,7 +100,7 @@ Name | Title | Description | States
 -------------- | -------------- | -------------- | --------------
 result | Result | Result of connect or disconnect request | success / failure
 
-## Status Request Response
+## Status Request Reponse
 
 ```javascript
 if(event.dataSource == 'StatusRequestResponse') {
